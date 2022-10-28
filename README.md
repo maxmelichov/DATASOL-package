@@ -63,7 +63,7 @@ After Creating_Dataframe
 
 ![image](https://user-images.githubusercontent.com/80150303/198688034-8d94cc9d-827c-46b5-90a1-122b0ec74374.png)
 
-outpu of Anomaly_Detetion
+output of Anomaly_Detetion
 
 
 
