@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: datasol
+Version: 0.0.1
+Summary: Anomaly Detetion
+Home-page: 
+Author: Maxim Melichov
+Author-email: maxme006@gmail.com
+License: MIT
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: MIT License
+Classifier: Programming Language :: Python :: 3.9
