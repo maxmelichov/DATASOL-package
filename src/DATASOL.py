@@ -8,9 +8,9 @@ import warnings
 warnings.filterwarnings("ignore")
 import External_func
 
-def Creating_Dataframe(df, columns, date, categorical_to_numeric =False,fillna =False,save = False):
-    date = df[date]
-    df.drop("timestamp", axis =1 ,inplace =True)
+def Creating_Dataframe(df, columns, date_col, categorical_to_numeric =False,fillna =False,save = False):
+    date = df[date_col]
+    df.drop(date_col, axis =1 ,inplace =True)
     for col in df.columns:
         if col not in columns:
             df.drop(col, axis =1 ,inplace =True)
@@ -35,16 +35,19 @@ def Creating_Dataframe(df, columns, date, categorical_to_numeric =False,fillna =
         df = df.set_index('Date')
         return df
     
-def Load_Dataframe(file_name,date_col='Date'):
+def Load_Dataframe(file_name,columns,date_col='Date'):
     df= pd.read_csv(file_name,parse_dates=[date_col], index_col=date_col)
-    if  'Unnamed: 0' in df.columns:
-        df.drop('Unnamed: 0',axis =1 ,inplace= True)
+    for col in df.columns:
+        if col not in columns:
+            df.drop(col, axis =1 ,inplace =True)
     return df
 
 
-def Anomaly_Detetion(df,TIME_STEPS= 288,epochs = 50,batch_size= 128,patience=1,threshold=99,layer1 = 32 , layer2= 16, layer3 = 16, layer4 =32,visual =False):
+def Anomaly_Detetion(df,TIME_STEPS= 288,epochs = 50,batch_size= 128,patience=1,layer1 = 32 , layer2= 16, layer3 = 16, layer4 =32,threshold=99,visual =False):
     anomaly= []
-    for col in df.columns:
+    ig,axs=plt.subplots(df.shape[1],figsize=(50,15))
+
+    for i,col in enumerate(df.columns):
         print("START",col)
         final = df[[col]]
         train,test = External_func.data_engineering(final,col)
@@ -75,12 +78,15 @@ def Anomaly_Detetion(df,TIME_STEPS= 288,epochs = 50,batch_size= 128,patience=1,t
         print("100%",col)
         print('Finish',col)
         if visual:
-            Visualization(test,THRESHOLD,TIME_STEPS,test_mae_loss)
-        anomaly[0].drop(col,inplace = True,axis =1)
+            if df.shape[1] != 1:
+                Visualization(test,THRESHOLD,TIME_STEPS,axs[i],test_mae_loss)
+            elif df.shape[1] == 1:
+                Visualization(test,THRESHOLD,TIME_STEPS,axs,test_mae_loss)   
+                
+        anomaly[i].drop(col,inplace = True,axis =1)
     return anomaly
 
-def Visualization(test,threshold,TIME_STEPS,test_mae_loss):
-    ig,axs=plt.subplots(1,figsize=(50,15))
+def Visualization(test,threshold,TIME_STEPS,axs,test_mae_loss):
     test_mae_loss = test_mae_loss.reshape((-1))
     anomalies = test_mae_loss > threshold
     anomalous_data_indices = []
