@@ -1,3 +1,3 @@
 # DATASOL-package
 
-   pip install datasol
+   ```pip install datasol```
