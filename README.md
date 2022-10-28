@@ -52,13 +52,28 @@ the function will return the anomaly list.
 
 
 Original data frame:
+
+
 ![image](https://user-images.githubusercontent.com/80150303/198687972-4914febc-fc3f-4c47-b626-e295d1c37034.png)
 
 After Creating_Dataframe
+
+
+
+
 ![image](https://user-images.githubusercontent.com/80150303/198688034-8d94cc9d-827c-46b5-90a1-122b0ec74374.png)
 
 outpu of Anomaly_Detetion
+
+
+
+
+
 ![image](https://user-images.githubusercontent.com/80150303/198688233-baa2bdb9-72c7-44f3-9662-bc59da0f8899.png)
+
+
+
+
 ![outputlab](https://user-images.githubusercontent.com/80150303/198688254-38f6d1c4-32cb-45f8-9d91-7783a959440f.png)
 
 
