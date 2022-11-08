@@ -2,6 +2,18 @@
 This package is made for Seagate.
 The package allows the user to detect anomalies in the data.
 
+Make sure you have the next versions:
+python >=3.9.0
+pandas >= 1.5.1
+numpy >= 1.23.3
+tensorflow >= 2.10.0
+tensorboard >= 2.10.1
+keras >= 2.10.0
+matplotlib >= 3.6.2
+sklearn >= 1.1.1
+warnings
+
+
 To Install the package: 
    ```pip install datasol```
    
