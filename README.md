@@ -2,7 +2,7 @@
 This package is made for Seagate.
 The package allows the user to detect anomalies in the data.
 
-Make sure you have the next versions:
+Make sure you have the next packages:
 python >=3.9.0
 pandas >= 1.5.1
 numpy >= 1.23.3
@@ -13,9 +13,12 @@ matplotlib >= 3.6.2
 sklearn >= 1.1.1
 warnings
 
+*Recommended*
+   ```pip install tensorflow-gpu```
 
 To Install the package: 
    ```pip install datasol```
+Works best with tensorflow-gpu
    
 ## Creating_Dataframe function will clean the data from unneeded columns, can transfer categorical to numeric, fill NAs with knn imputer, and save the file afterward.
 input- data frame (pandas), columns that you want to keep, and date column the rest are optional
