@@ -61,6 +61,10 @@ visual if set to true will return a plot of the data and the anomaly.
 
 the function will return the anomaly list.
 
+example:
+
+
+![image](https://user-images.githubusercontent.com/80150303/200631138-867cf179-64b8-4d31-aa76-091603812d83.png)
 
 
 Original data frame:
