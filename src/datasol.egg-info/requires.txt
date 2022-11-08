@@ -1,9 +1,0 @@
-pandas~=1.5
-numpy~=1.2
-matplotlib~=3.6
-sklearn~=0.2
-tensorflow~=2.1
-blessing~=1.7
-
-[dev]
-pytest>=3.7
