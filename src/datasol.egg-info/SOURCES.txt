@@ -1,0 +1,10 @@
+License.txt
+README.md
+setup.py
+src/datasol.py
+src/datasol.egg-info/PKG-INFO
+src/datasol.egg-info/SOURCES.txt
+src/datasol.egg-info/dependency_links.txt
+src/datasol.egg-info/not-zip-safe
+src/datasol.egg-info/requires.txt
+src/datasol.egg-info/top_level.txt
