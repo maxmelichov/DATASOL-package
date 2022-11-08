@@ -14,7 +14,7 @@ sklearn >= 1.1.1
 warnings
 
 *Recommended*
-   ```pip install tensorflow-gpu```
+   ```tensorflow-gpu```
 
 To Install the package: 
    ```pip install datasol```
