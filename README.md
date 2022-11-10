@@ -10,7 +10,7 @@ tensorflow >= 2.10.0,
 tensorboard >= 2.10.1,
 keras >= 2.10.0,
 matplotlib >= 3.6.2,
-sklearn >= 1.1.1,
+sklearn(scikit-learn) >= 1.1.1,
 warnings
 
 *Recommended*
